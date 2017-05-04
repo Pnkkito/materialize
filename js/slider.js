@@ -53,7 +53,10 @@
                               complete: function() {
                                 $slides.not('.active').velocity({opacity: 0, translateX: 0, translateY: 0}, {duration: 0, queue: false});
                               } });
-            captionTransition($caption, options.transition);
+            //captionTransition($caption, options.transition);
+            $caption.each(function(){
+              captionTransition($(this), options.transition);
+            });
 
 
             // Update indicators
